@@ -63,10 +63,8 @@ class TestTree:
         node_list[19].add(node_list[20])
         node_list[19].add(node_list[21])
 
-        for i, (node_in_tree, node) in enumerate(
-            zip_longest(
-                Tree.breadth_first_traversal(t),
-                node_list
-            )
+        for node_in_tree, node in zip_longest(
+            Tree.breadth_first_traversal(t),
+            node_list
         ):
             assert node_in_tree is node
