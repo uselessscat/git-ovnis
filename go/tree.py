@@ -7,15 +7,18 @@ class Node:
         name: Optional[str] = None,
         vertex_name: Optional[str] = None,
         data: Optional[Any] = None,
+        parent: Optional['Node'] = None,
         children: Optional[List['Node']] = None
     ):
         self.name = name
         self.vertex_name = vertex_name
 
         self.data = data
+        self.parent = None
         self.children = children if children is not None else []
 
     def add(self, node: 'Node'):
+        node.parent
         self.children.append(node)
 
     def __str__(self):

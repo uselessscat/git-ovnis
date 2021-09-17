@@ -8,12 +8,14 @@ class TestNode:
         n = Node()
 
         assert hasattr(n, 'name')
+        assert hasattr(n, 'parent')
         assert hasattr(n, 'vertex_name')
         assert hasattr(n, 'children')
         assert hasattr(n, 'data')
 
         assert n.name is None
         assert n.vertex_name is None
+        assert n.parent is None
         assert n.children == []
         assert n.data is None
 
